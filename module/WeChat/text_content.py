@@ -39,21 +39,13 @@ class WeiXin_Post_Text(Resource):
             return access_token_code
         post_text = self.post_text_content(access_token,args['agentid'],args['text'])
         return post_text
-    # 添加作者信息
-    def json_data(self,json):
-        json['author'] = {
-                    'name':'HTMAPI',
-                    'desc':'本api由HTMAPI免费提供服务，官方文档：www.htm.fun'
-            }
-        return json
+
 
     # 挂载get和post方法
     def get(self):
         r = self.except_data()
-        r = self.json_data(r)
         return r
 
     def post(self):
         r = self.except_data()
-        r = self.json_data(r)
         return r
