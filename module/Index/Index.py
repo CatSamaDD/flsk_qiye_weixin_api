@@ -4,7 +4,7 @@ from module import json,reqparse, Resource,requests
 class Index(Resource):
 
     def __init__(self):
-        self.author = {
+        self.usage = {
                         "code": 200,
                         "msg": "success",
                         "author": {
@@ -13,6 +13,6 @@ class Index(Resource):
                         }
                     }
     def get(self):
-        return self.author,201
+        return self.usage,201
     def post(self):
-        return self.author,201
+        return self.usage,201
