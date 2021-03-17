@@ -44,18 +44,11 @@ class WeiXin_Text_Card(Resource):
         post_text = self.post_textcard_content(access_token,args['agentid'],args['title'],args['description'],args['url'])
         return post_text
         
-    def json_data(self,json):
-        json['author'] = {
-                    'name':'HTMAPI',
-                    'desc':'本api由HTMAPI免费提供服务，官方文档：www.htm.fun'
-            }
-        return json
+   
     def get(self):
         r = self.except_data()
-        r = self.json_data(r)
         return r
 
     def post(self):
         r = self.except_data()
-        r = self.json_data(r)
         return r
