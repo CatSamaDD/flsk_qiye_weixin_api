@@ -14,7 +14,7 @@ class Index(Resource):
                                 "corpsecret": "应用的凭证密钥",
                                 "agentid": "应用ID",
                                 "text": "推送内容，支持HTML"
-                            }
+                            },
                             "text_card": {
                                 "api": "{domain:port}/api/Wechat/text_card/",
                                 "corpid": "企业ID",
